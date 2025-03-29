@@ -29,9 +29,22 @@
 		A5AFD0392D94B5C1002897CB /* BucketlistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BucketlistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A5B7DD4B2D97DE1300E09DCC /* Exceptions for "Bucketlist" folder in "Bucketlist" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A5AFD01E2D94B5C0002897CB /* Bucketlist */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A5AFD0212D94B5C0002897CB /* Bucketlist */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A5B7DD4B2D97DE1300E09DCC /* Exceptions for "Bucketlist" folder in "Bucketlist" target */,
+			);
 			path = Bucketlist;
 			sourceTree = "<group>";
 		};
@@ -396,8 +409,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bucketlist/Preview Content\"";
+				DEVELOPMENT_TEAM = AQMBZ49563;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bucketlist/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,8 +441,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bucketlist/Preview Content\"";
+				DEVELOPMENT_TEAM = AQMBZ49563;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bucketlist/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
