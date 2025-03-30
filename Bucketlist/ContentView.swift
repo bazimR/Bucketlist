@@ -18,7 +18,7 @@ struct ContentView: View {
 
     @State private var viewModel = ViewModel()
     var body: some View {
-        if viewModel.isUnlocked {
+        if !viewModel.isUnlocked {
             ZStack {
                 MapReader { MapProxy in
                     Map(initialPosition: startPosition) {
@@ -41,7 +41,9 @@ struct ContentView: View {
                                     }
                             }
                         }
-                    }.onTapGesture { position in
+                    }.mapStyle(
+                        viewModel.mapType.value
+                    ).onTapGesture { position in
                         if let coordinates = MapProxy.convert(
                             position, from: .local)
                         {
@@ -60,6 +62,11 @@ struct ContentView: View {
                             .foregroundStyle(.primary)
                             .padding()
                         Spacer()
+                        Picker("Map type", selection: $viewModel.mapType) {
+                            Text("standard").tag(MapStyles.standard)
+                            Text("Hybrid").tag(MapStyles.hybrid)
+                        }.pickerStyle(.segmented).padding(.horizontal)
+
                     }
                     Spacer()
                 }

@@ -8,6 +8,21 @@
 import CoreLocation
 import Foundation
 import LocalAuthentication
+import MapKit
+import _MapKit_SwiftUI
+
+enum MapStyles {
+    case hybrid,standard
+
+    var value: MapStyle {
+        switch self {
+        case .hybrid:
+            .hybrid
+        case .standard:
+            .standard
+        }
+    }
+}
 
 extension ContentView {
     @Observable
@@ -16,7 +31,7 @@ extension ContentView {
         var selectedPlace: Location?
         var isUnlocked = false
         let savedPath = URL.documentsDirectory.appending(path: "SavedPath")
-
+        var mapType: MapStyles = .hybrid
         init() {
             do {
                 let data = try Data(contentsOf: savedPath)
@@ -79,11 +94,11 @@ extension ContentView {
                         if success {
                             self.isUnlocked = true
                         } else {
-//error
+                            //error
                         }
                     }
             } else {
-//no biometrics
+                //no biometrics
             }
         }
     }
